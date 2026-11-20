@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header id="header">
+      <section id="greeting-widget">
+        <span id="clock"></span>
+        <span id="date-display"></span>
+        <p id="greeting-text"></p>
+        <form id="name-form">
+          <input id="name-input" type="text" maxlength="50" placeholder="Enter your name" />
+          <button type="submit">Save Name</button>
+        </form>
+      </section>
+      <button id="theme-toggle" type="button">Toggle Theme</button>
+    </header>
+
+    <main id="dashboard-grid">
+      <!-- Dashboard Introduction -->
+<section id="dashboard-intro">
+  <div>
+    <span class="section-label">PERSONAL WORKSPACE</span>
+    <h1>My Dashboard<span class="accent-dot">.</span></h1>
+    <p>Manage your time, tasks, and productivity in one place.</p>
+  </div>
+
+  <div class="dashboard-status">
+    <span class="status-indicator"></span>
+    All systems ready
+  </div>
+</section>
+      <section id="timer-widget">
+        <div class="widget-heading">
+  <div>
+    <span class="section-label">FOCUS SESSION</span>
+    <h2>Pomodoro Timer</h2>
+    <p>Stay focused and get things done.</p>
+  </div>
+  <span class="widget-icon">◷</span>
+</div>
+        <span id="timer-display">25:00</span>
+        <button id="timer-start" type="button">Start</button>
+        <button id="timer-stop" type="button">Stop</button>
+        <button id="timer-reset" type="button">Reset</button>
+        <div id="timer-banner" style="display:none;"></div>
+        <form id="duration-form">
+          <input id="duration-input" type="number" min="1" max="120" placeholder="1-120" />
+          <button type="submit">Set Duration</button>
+        </form>
+        <span id="duration-error"></span>
+      </section>
+      <section id="tasks-widget">
+        <div class="widget-heading">
+  <div>
+    <span class="section-label">DAILY PLANNER</span>
+    <h2>My Tasks</h2>
+    <p>Keep track of your daily activities.</p>
+  </div>
+  <span class="widget-icon">✓</span>
+</div>
+        <form id="task-form">
+          <input id="task-input" type="text" maxlength="200" placeholder="Add a task..." />
+          <button type="submit">Add Task</button>
+        </form>
+        <span id="task-error"></span>
+        <ul id="task-list"></ul>
+      </section>
+      <section id="links-widget">
+        <div class="widget-heading">
+  <div>
+    <span class="section-label">QUICK ACCESS</span>
+    <h2>Quick Links</h2>
+    <p>Your favorite websites in one place.</p>
+  </div>
+  <span class="widget-icon">↗</span>
+</div>
+        <form id="link-form">
+          <input id="link-label-input" type="text" maxlength="50" placeholder="Label (1-50 chars)" />
+          <input id="link-url-input" type="text" maxlength="2048" placeholder="URL" />
+          <button type="submit">Add Link</button>
+        </form>
+        <span id="link-error"></span>
+        <ul id="link-list"></ul>
+      </section>
+    </main>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
